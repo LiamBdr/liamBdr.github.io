@@ -9,7 +9,6 @@ let tl = gsap.timeline({
       start: "top top", // when the top of the trigger hits the top of the viewport
       end: "+900", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      markers: true
     }
   });
 
@@ -25,7 +24,6 @@ gsap.from("#brownie", {
     trigger: "#personnages",
     toggleActions: "play none none none",
     start: "top top", // when the top of the trigger hits the top of the viewport
-    markers:true,
 
   },
   duration: 1.2,
