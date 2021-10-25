@@ -1,59 +1,38 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test carte interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 
-    <title>Liam BOUDRAA</title>
-    <meta name="description" content="Git Hub Web Page">
-    <meta name="author" content="Liam BOUDRAA">
+    <h1>Carte interactive</h1>
+    <div id="controls"></div>
+    <div id="gmap" style="position: absolute;"></div>
 
-    <meta property="og:title" content="Liam's Github page">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-    <meta property="og:description" content="A simple HTML5 Template for new projects.">
-    <meta property="og:image" content="image.png">
+    
 
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon.svg">
+    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/maplace-0.1.3.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script type="text/javascript">
+        $(function() {
+            new Maplace({
+                locations: [{
+                                lat: 48.26943710406414,
+                                lon: 4.079558662355982,
+                                zoom: 16
+                            }],
+                controls_on_map: false
+            }).Load();
+        });
+    </script>
+    
+</body>
 
-  </head>
-
-  <div id="containeur">
-
-    <div id="banner">
-    </div>
-  
-    <img id="main-logo" src="public/assets/img/logo-white.png" alt="Logo M&M's">
-
-    <div id="personnages">
-
-        <img class="pers" id="pers-blue" src="public/assets/img/blue.png" alt="M&M'S bleu">
-        <img class="pers" id="pers-brown" src="public/assets/img/brown.png" alt="M&M'S marron">
-        <img class="pers" id="pers-red" src="public/assets/img/red.png" alt="M&M'S rouge">
-        <img class="pers" id="pers-yellow" src="public/assets/img/yellow.png" alt="M&M'S jaune">
-        <img class="pers" id="pers-green" src="public/assets/img/green.png" alt="M&M'S vert">
-        <img class="pers" id="pers-orange" src="public/assets/img/orange.png" alt="M&M'S orange">
-        
-    </div>
-
-    <img id="brownie" src="/public/assets/img/brownie.png" alt="Brownie">
-
-  </div>
-
-
-  <body>
-    <!-- SCRIPTS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/EasePack.min.js"></script>
-    <script src="public/js/app.js"></script>
-
-  </body>
 </html>
