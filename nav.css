@@ -1,0 +1,178 @@
+/********
+HEADER ACCUEIL
+*********/
+
+header {
+  width: 100%;
+  height: 50px;
+  background: var(--secondary);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+
+  display: flex;
+  align-items: center;
+  padding: 0 1.5%;
+  font-size: 15px;
+
+  z-index: 1000;
+}
+
+header #membre,
+#infos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header #membre {
+  justify-content: flex-start;
+  font-weight: 300;
+}
+
+#membre .member-svg {
+  fill: #eeeeee;
+  margin-right: 10px;
+}
+
+#membre a {
+  font-weight: 200;
+  margin: 0 3px;
+  text-decoration: none;
+  color: white;
+}
+
+#membre a:nth-last-child(1) {
+  font-weight: 500;
+}
+
+#membre a:hover {
+  text-decoration: underline;
+}
+
+header #logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: 125%;
+  width: 80px;
+  border-radius: 0px 0px 15px 15px;
+  background: var(--secondary);
+}
+
+#logo svg {
+  position: relative;
+  fill: white;
+  height: 70%;
+  width: 60%;
+}
+
+header #infos {
+  margin-left: auto;
+  font-weight: 200;
+}
+
+#infos #localisation {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  fill: #eeeeee;
+  color: white;
+}
+
+#localisation .pin-svg {
+  margin-right: 10px;
+}
+
+#infos p:nth-last-child(1) {
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+/********
+FOOTER ACCUEIL
+*********/
+
+footer {
+  height: auto;
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  position: relative;
+  margin-top: 100px;
+}
+
+div.footer-chameau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+div.footer-chameau img {
+  width: auto;
+  height: 200px;
+}
+
+div.footer-nav {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+div.footer-nav div {
+  display: flex;
+  flex-direction: column;
+}
+
+p.footer-title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+div.footer-nav a {
+  font-size: 15px;
+  font-family: "Poppins";
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+div.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+div.footer-nav a::first-letter {
+  text-transform: uppercase;
+}
+
+footer svg {
+  fill: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  height: 45px;
+}
+
+@media screen and (max-width: 1024px) {
+  div.footer-chameau {
+    display: none;
+  }
+
+  div.footer-nav {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+}
