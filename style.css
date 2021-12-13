@@ -22,6 +22,15 @@ body {
   color: white;
 }
 
+header {
+  position: relative;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
 /*********** INTRO SECTION ********/
 
 .intro {
@@ -108,7 +117,6 @@ section.video {
   height: auto;
   padding: 0 2%;
   margin-top: 200px;
-  overflow-x: clip;
 }
 
 .video h2 {
