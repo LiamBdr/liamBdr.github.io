@@ -86,7 +86,7 @@ section.cta {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(assets/img/cta-background.jpg);
+  background: url(../assets/img/cta-background.jpg);
   background-position: center center;
 }
 
@@ -94,7 +94,7 @@ section.cta {
   color: white;
   font-size: 22px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
   background: var(--primary);
   padding: 10px 15px;

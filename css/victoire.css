@@ -1,0 +1,330 @@
+main {
+  background-image: url(../assets/img/confettis.gif);
+  background-size: 100% 40%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div.haut-victoire {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1#felicitation {
+  text-align: center;
+  font-size: 70px;
+  color: transparent;
+  -webkit-text-stroke: var(--primary) 2px;
+  margin-top: 50px;
+}
+
+p.description {
+  margin-top: 40px;
+  text-align: justify;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 200;
+}
+
+/*********** recompenses SECTION ********/
+
+section.recompenses {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.recompenses h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 1px;
+
+  margin-bottom: 30px;
+}
+
+.recompenses #caroussel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 450px;
+  margin: auto;
+}
+
+#caroussel .sliders {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  transform-origin: bottom center;
+}
+
+.sliders .carouselSlide {
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  margin: 0 2%;
+  transition: all cubic-bezier(0.71, 0.17, 0.29, 0.88) 0.4s;
+  transform-origin: center center;
+}
+
+.carouselSlide:nth-child(1) {
+  margin-left: 0;
+}
+
+.carouselSlide:nth-last-child(1) {
+  margin-right: 0;
+}
+
+#caroussel .slider-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -50px;
+
+  height: 40px;
+  width: auto;
+  fill: #eeeeee;
+  margin: auto 0 auto 0;
+  cursor: pointer;
+}
+
+.slider-arrow.left {
+  right: auto;
+  left: -50px;
+  transform: rotate(180deg);
+}
+
+#caroussel #slider-square {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+
+  width: auto;
+  height: 30px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#slider-square div {
+  height: 6px;
+  width: 6px;
+  margin: 0 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+#slider-square div.square--activ {
+  background: var(--primary);
+}
+
+.carouselSlide .slide-img {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px 25px 0 0;
+}
+
+.slide-img img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carouselSlide .slide-desc {
+  position: relative;
+  height: 25%;
+  width: 100%;
+  background: rgb(44, 44, 44);
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+  border-radius: 0 0 25px 25px;
+}
+
+.slide-desc b {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.slide-desc p {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.slide-desc a {
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+  transition: all ease 0.3s;
+}
+
+.slide-desc a:hover {
+  background: var(--primary-dark);
+}
+
+/* FIN DU SLIDER */
+
+/* DATA */
+
+#data {
+  margin-top: 80px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+p.data {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}
+
+p.data span {
+  font-size: 30px;
+}
+
+p.data-description {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* FIN DU DATA */
+
+/* BACKGROUND IMAGE */
+
+#background {
+  background-image: url(../assets/img/background_classement.png);
+  background-size: cover;
+  width: 100%;
+  height: 280px;
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+div.lien-classement {
+  width: 411px;
+  height: 66px;
+  background-color: var(--primary);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  cursor: pointer;
+}
+
+div.lien-classement:hover {
+  background-color: white;
+}
+
+div.lien-classement:hover a {
+  color: var(--primary);
+}
+
+div.lien-classement a {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+/* HARPIE */
+
+img.harpie {
+  position: absolute;
+  height: 182px;
+  width: 326px;
+  top: -159px;
+  left: 78%;
+  transform: rotate(5deg);
+}
+
+@media screen and (max-width: 1024px) {
+  img.harpie {
+    display: none;
+  }
+
+  div.haut-victoire {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p.description {
+    width: 90%;
+  }
+
+  .recompenses #caroussel {
+    width: 80%;
+  }
+
+  .slide-desc b {
+    font-size: 22px;
+  }
+
+  .slide-desc p {
+    font-size: 12px;
+  }
+
+  #caroussel .slider-arrow {
+    right: -30px;
+    height: 30px;
+  }
+
+  .slider-arrow.left {
+    left: -30px;
+  }
+
+  h1#felicitation {
+    font-size: 60px;
+  }
+
+  #data {
+    flex-direction: column;
+  }
+
+  #data div {
+    margin: 15px 0;
+  }
+
+  #background {
+    margin-top: 80px;
+  }
+}

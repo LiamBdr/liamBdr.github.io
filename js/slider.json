@@ -1,0 +1,13 @@
+[
+
+    { "titre": "Poster hipopoplante", "photo": "assets/img/poster-mockup.jpg", "desc": "841x594 mm"},
+
+    { "titre": "Poster renard", "photo": "https://static1.purebreak.com/articles/9/20/01/89/@/727382-thekairi78-au-coeur-d-une-nouvelle-polem-diapo-1.jpg", "desc": "841x594 mm"},
+
+    { "titre": "Poster arouf", "photo": "https://cd1.rap2france.com/public/medias/news/8668/660x330/xhdpi/arouf-gangsta-dans-la-sauce-suite-a-des-accusations-de-pedophilie-1609593947.jpg", "desc": "841x594 mm"},
+    
+    { "titre": "Poster yes", "photo": "https://media.gqmagazine.fr/photos/5fe0c7f43b7b5653fe5bb243/3:2/w_1200,h_800,c_limit/comprar-rolex.jpg", "desc": "841x594 mm"},
+
+    { "titre": "Poster final", "photo": "https://www.lequipe.fr/_medias/img-photo-jpg/le-resultat-du-grand-prix-est-toujours-incertain-f1-grand-prix-of-abu-dhabi-anp-sport-anp/1500000001581182/0:0,1997:1331-828-552-75/34231.jpg", "desc": "841x594 mm"}
+]
+
