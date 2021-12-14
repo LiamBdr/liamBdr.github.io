@@ -6,8 +6,7 @@ header {
 main {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
 }
 
 /********** HEADER ENIGME ********/
@@ -63,7 +62,7 @@ header #display {
   fill: #42f88b;
 }
 
-#radar-svg.rouge {
+#display #radar-svg.rouge {
   fill: #ff5d57;
 }
 
@@ -110,15 +109,16 @@ header #header-nav {
 /********** MAIN ENIGME ********/
 
 main #enigme-img {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }
 
 main #dialogue {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -126,7 +126,7 @@ main #dialogue {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 25px 25px 0px 0px;
   width: 70%;
-  height: 25%;
+  min-height: 25%;
   padding: 20px 30px;
 }
 
@@ -181,7 +181,7 @@ main #dialogue {
 }
 
 main .map {
-  position: relative;
+  position: fixed;
   display: inline-block;
   width: 400px;
   height: 320px;
@@ -219,4 +219,176 @@ main .map.activ {
   height: 12px;
   cursor: pointer;
   opacity: 0.8;
+}
+
+/********* RÉPONSE ENIGME *********/
+
+main #enigme-cache {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(180deg, #050505 0%, rgba(30, 30, 30, 0.2) 100%);
+}
+
+main #hero-robot {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 30%;
+  transform: scaleX(-100%);
+  opacity: 0.9;
+}
+
+main .reponse {
+  position: fixed;
+  height: auto;
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.reponse .enonce {
+  position: relative;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 20px 25px;
+  margin-top: 20px;
+}
+
+.enonce .logo {
+  position: absolute;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+  fill: #eeeeee;
+}
+
+.enonce b {
+  display: block;
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.enonce p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.enonce p span {
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.reponse form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 50px;
+  width: auto;
+
+  background: #242424;
+  border: 2px solid #3f403f;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.reponse form input[type="number"] {
+  background: #161616;
+  border-radius: 10px;
+  border: none;
+
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+.reponse form input[type="number"]:focus {
+  outline: none;
+}
+
+.reponse form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.reponse form input[type="submit"] {
+  position: relative;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 2px 20px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 0;
+
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.reponse form input[type="submit"]:hover {
+  background: #eeeeee;
+}
+
+@media screen and (max-width: 1024px) {
+  main .reponse {
+    width: 90%;
+  }
+
+  #dialogue b {
+    font-size: 18px;
+  }
+
+  #dialogue p {
+    font-size: 12px;
+  }
+
+  #dialogue .next-arrow {
+    width: 60px;
+    height: auto;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .reponse form {
+    padding: 10px 30px;
+  }
+
+  .enonce b {
+    font-size: 22px;
+  }
+
+  .enonce p {
+    font-size: 12px;
+  }
+
+  .reponse form input[type="number"] {
+    font-size: 25px;
+  }
+
+  .reponse form input[type="submit"] {
+    font-size: 11px;
+  }
 }

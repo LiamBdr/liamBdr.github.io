@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-
+    //RANDOM BPM ÉNIGME
     function getRandomArbitrary(min, max) {
         return Math.round(Math.random() * (max - min) + min);
     }
@@ -24,6 +24,7 @@ $( document ).ready(function() {
     }, 2000);
 
 
+    //GESTION CARTE ÉNIGME
     $(".map").draggable({
         containment : "main",
         scroll:false
@@ -45,14 +46,40 @@ $( document ).ready(function() {
 
         }
         
-      });
+    });
 
-      $(".map-close").click(function() {
-            $("a#map").removeClass("activ");
-            $(".map").removeClass("activ");
-      });
+    $(".map-close").click(function() {
+        $("a#map").removeClass("activ");
+        $(".map").removeClass("activ");
+    });
 
-    /*
-    
-    */
+
+    //INPUT NUMBER
+    $('.input-num').on('focus', function() {
+        $(this).val('');
+    });
+
+    $('.input-num').on('input keyup change paste', function(i) {
+        $(this).val($(this).val().replace(/[^0-9]/gi, ''));
+
+        $(this).val($(this).val().substring(0,1));
+    });
+
+    let total = document.getElementsByClassName('input-num');
+    $('.input-num').on('keyup', function(i) {
+
+        if (i.keyCode >= 48 && i.keyCode <= 57) {
+            
+            let currentId = i.target.id;
+            let id = parseInt(currentId.match(/\d+/)[0]);
+            let nextId = 'num'+(id+1);
+
+            if (id <+ total.length) {
+                document.getElementById(nextId).focus();
+            }
+            
+        }
+
+    });
+
 });
