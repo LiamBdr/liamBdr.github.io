@@ -353,6 +353,40 @@ main .reponse {
 }
 
 @media screen and (max-width: 1024px) {
+  header {
+    font-size: 13px !important;
+  }
+
+  #display p {
+    margin-right: 5px;
+  }
+
+  #display #bpm {
+    width: 25px;
+    margin-right: 3px;
+  }
+
+  #display #battery-svg,
+  #display #radar-svg {
+    display: none;
+    height: 20%;
+    margin-right: 5px;
+  }
+
+  #infos #localisation {
+    margin-right: 5px;
+  }
+
+  #localisation .pin-svg {
+    position: relative;
+    height: 12px;
+    margin-right: 3px;
+  }
+
+  #date {
+    display: none;
+  }
+
   main .reponse {
     width: 90%;
   }
