@@ -1,0 +1,222 @@
+header {
+  position: fixed;
+  top: 0;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/********** HEADER ENIGME ********/
+
+header {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+header #display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  justify-content: flex-start;
+  font-weight: 300;
+}
+
+#display p {
+  margin-right: 20px;
+}
+
+#display #bpm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 13px;
+  width: 43px;
+  max-width: 43px;
+}
+
+#bpm span {
+  font-weight: 200;
+}
+
+#bpm svg {
+  height: 25%;
+}
+
+#display #battery-svg,
+#display #radar-svg {
+  position: relative;
+  margin-right: 15px;
+  height: 30%;
+}
+
+#display #radar-svg {
+  fill: white;
+}
+
+#display #radar-svg.vert {
+  fill: #42f88b;
+}
+
+#radar-svg.rouge {
+  fill: #ff5d57;
+}
+
+header #header-nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  top: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 5px;
+  height: 115%;
+  width: 170px;
+  border-radius: 0px 0px 15px 15px;
+  background: var(--secondary);
+}
+
+#header-nav a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80%;
+  width: 25%;
+  cursor: pointer;
+}
+
+#header-nav a svg {
+  fill: white;
+  transition: all ease-in 0.1s;
+}
+
+#header-nav a.activ svg {
+  fill: var(--primary);
+}
+
+#header-nav a:hover:not(.activ) svg {
+  fill: rgb(206, 206, 206);
+}
+
+/********** MAIN ENIGME ********/
+
+main #enigme-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+main #dialogue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px 25px 0px 0px;
+  width: 70%;
+  height: 25%;
+  padding: 20px 30px;
+}
+
+#dialogue b {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+#dialogue b::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+#dialogue p {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: justify;
+}
+
+#dialogue .next-arrow {
+  position: absolute;
+  right: 50px;
+  bottom: 25px;
+  display: flex;
+  width: auto;
+  height: auto;
+
+  transition: all ease-out 0.2s;
+  transform-origin: left;
+}
+
+.next-arrow:hover {
+  transform: scaleX(1.2);
+}
+
+#dialogue .logo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  height: 15px;
+  width: auto;
+  fill: #eeeeee;
+}
+
+main .map {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 320px;
+  top: 10%;
+  left: 10%;
+
+  border: 2px solid #3f403f;
+  border-radius: 19px;
+
+  background: url(../assets/img/map.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: grab;
+
+  transform: translateX(-1000px);
+  transition: transform ease 0.3s, opacity ease 0.3s;
+  opacity: 0;
+  z-index: 1000;
+}
+
+main .map.activ {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.map.ui-draggable-dragging {
+  cursor: grabbing !important;
+}
+
+.map .map-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  height: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+}

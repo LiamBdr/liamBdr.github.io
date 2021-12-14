@@ -90,6 +90,10 @@ header #infos {
   margin-right: 10px;
 }
 
+#localisation #heure span:nth-child(2) {
+  transition: all ease 0.1s;
+}
+
 #infos p:nth-last-child(1) {
   font-weight: 400;
   margin-left: 10px;
