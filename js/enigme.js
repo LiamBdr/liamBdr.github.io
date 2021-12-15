@@ -54,6 +54,62 @@ $( document ).ready(function() {
     });
 
 
+    //SETTINGS 
+
+
+    $("a#settings").click(function(e) {
+
+        e.preventDefault();
+
+        if ($(this).hasClass("activ")) {
+
+            $(this).removeClass("activ");
+            $(".settings").removeClass("activ");
+
+            
+        } else {
+
+            $(this).addClass("activ");
+            $(".settings").addClass("activ");
+        }
+        
+    });
+
+
+    $("#sound").click(function(e) {
+
+        e.preventDefault();
+
+        if ($(this).hasClass("on")) {
+
+            $(this).removeClass("on");
+            $(this).addClass("off");
+            document.getElementById("enigme-audio").pause();
+
+        } else {
+
+            $(this).removeClass("off");
+            $(this).addClass("on");
+            document.getElementById("enigme-audio").play();
+        }
+        
+    });
+
+    $("#language").click(function(e) {
+
+        e.preventDefault();
+
+        if ($(this).hasClass("fr")) {
+
+            $(this).removeClass("fr");
+            $(this).addClass("en");
+        } else {
+            $(this).addClass("fr");
+            $(this).removeClass("en");
+        }
+        
+    });
+
     //INPUT NUMBER
     $('.input-num').on('focus', function() {
         $(this).val('');

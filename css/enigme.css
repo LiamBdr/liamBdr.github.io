@@ -222,6 +222,70 @@ main .map.activ {
   opacity: 0.8;
 }
 
+main .settings {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+  min-width: 150px;
+  height: 10%;
+  min-height: 100px;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  border: 2px solid #3f403f;
+  border-radius: 19px;
+  background: var(--secondary);
+
+  z-index: 1000;
+  transform: translateY(-500px);
+  transition: transform ease 0.3s, opacity ease 0.3s;
+  opacity: 0;
+}
+
+main .settings #sound,
+main .settings #language {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+}
+
+main .settings svg {
+  position: relative;
+  height: 40%;
+  width: auto;
+  cursor: pointer;
+}
+
+main .settings.activ {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.settings #sound.on .sound-off {
+  display: none;
+}
+
+.settings #sound.off .sound-on {
+  display: none;
+}
+
+.settings #language.fr .english {
+  display: none;
+}
+
+.settings #language.en .french {
+  display: none;
+}
+
 /********* RÉPONSE ENIGME *********/
 
 main #enigme-cache {

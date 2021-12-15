@@ -44,7 +44,7 @@ $( document ).ready(function() {
         audio.play();
         audio.volume = 0.4;
 
-        setInterval(() => {
+        setTimeout(() => {
             audio.play();
         }, 1000);
     }
