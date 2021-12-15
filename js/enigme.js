@@ -91,8 +91,6 @@ $( document ).ready(function() {
     let enigme = '';
     let numEnigme = document.querySelector('#num-enigme').value;
 
-    console.warn(numEnigme);
-
     let pageTitre = document.querySelector('#dialogue b');
     let pageTexte = document.querySelector('#dialogue p');
 
