@@ -315,6 +315,7 @@ main .reponse {
   background: #161616;
   border-radius: 10px;
   border: none;
+  width: 40px;
 
   text-align: center;
   color: white;
