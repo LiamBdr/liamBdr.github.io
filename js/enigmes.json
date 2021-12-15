@@ -1,0 +1,12 @@
+[
+
+    { "titre": "Requinos", "texte1": "Le requin sent la chair fraiche, il se déplace rapidement grâce à ses mollets d'étalon. Le robot n'arrive pas à analyser la nature de la plante implantée dans son crâne. La méfiance est de mise.", "texte2": "Le requin commence à s'approcher dangereusement",  "enigme": "Vous vous trouvez face au mécanisme qui a permis au héros d'ouvrir la porte. Sur ce mécanisme, il est possible de rentrer 4 chiffres.<br>Les indices pour trouver la bonne combinaison se trouvent dans cette salle.<span>Saurez-vous les trouver ?</span>", "action":"enigme2.html" , "reponse":"1234"},
+
+    { "titre": "Toucanos", "texte1": "Le héros, pendant l’étape de la jungle arrive dans un temple mystérieux et sûrement très dangereux. À la découverte de ce temple, le héros, inconsciemment, remarque 4 détails comme un nombre de statues ou le nombre de branches épineuses recouvrant la créature.", "texte2": "Lorsque le héros arrive au mécanisme, il lui faut rentrer la combinaison de 4 chiffres. ", "enigme": "Vous vous trouvez face au mécanisme qui a permis au héros d'ouvrir la porte. Sur ce mécanisme, il est possible de rentrer 4 chiffres.<br>Les indices pour trouver la bonne combinaison se trouvent dans cette salle.<span>Saurez-vous les trouver ?</span>", "action":"enigme3.html" , "reponse":"1234" },
+
+    { "titre": "Scarabinos", "texte1": "Un Scarabinos positionné dans les montagnes, essaie de détruire une énorme statue, où à l’intérieur se trouve un de ses petits.", "texte2": "Le héros veut l’aider mais ne sait pas comment s'y prendre vu l’ampleur de cette statue.", "enigme": " Le robot propose d’exploser cette sculpture à l’aide de son canon positionné sur son épaule gauche. Mais le Scarabious l’avertie !<br><span>Il ne veut pas que son petit meurt dans cette explosion, le robot doit donc très bien gérer son tir.</span>", "action":"enigme4.html" , "reponse":"1234" },
+
+    { "titre": "Araignos", "texte1": "Vous êtes emprisonné dans la toile !!!", "texte2": "La tarentule géante se rapproche de plus en plus et vous regarde tel un poulet roti....", "enigme": "La toile d’araignée correspond à un labyrinthe en cercle<br><span>Vous devez vous échapper.</span>", "action":"victoire.html" , "reponse":"1234" }
+
+]
+

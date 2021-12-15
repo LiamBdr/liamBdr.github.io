@@ -7,7 +7,7 @@ $( document ).ready(function() {
     
     function getCurrentTime() {
         var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+(today.getFullYear()+25);
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-2042';
 
         
         var minutes = today.getMinutes();
@@ -36,6 +36,19 @@ $( document ).ready(function() {
 
     }, 2000);
 
+
+
+    //AUDIO
+    if (document.getElementById("enigme-audio")) {
+        var audio = document.getElementById("enigme-audio");
+        audio.play();
+        audio.volume = 0.4;
+
+        setInterval(() => {
+            audio.play();
+        }, 1000);
+    }
+    
     
 
 });

@@ -108,7 +108,8 @@ header #header-nav {
 
 /********** MAIN ENIGME ********/
 
-main #enigme-img {
+main #enigme-img,
+main #enigme-video {
   position: relative;
   min-height: 100vh;
   height: auto;
